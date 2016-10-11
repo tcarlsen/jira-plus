@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "JIRA Plus",
+  "version": "1.0.0",
+  "description": "minor improvements for the web version of JIRA",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "author": "tcarlsen",
+  "homepage_url": "https://github.com/tcarlsen/jira-plus",
+  "offline_enabled": true,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "js": ["script.js"]
+    }
+  ],
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  }
+}
